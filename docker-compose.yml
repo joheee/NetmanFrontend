@@ -14,4 +14,4 @@ services:
       - "5030:4173" 
     volumes:
       - .:/usr/src/app
-    command: ["run","vite", "preview"]
+    command: ["vite", "preview"]
