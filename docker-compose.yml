@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfile
+      target: production
+    container_name: frontend
+    image: frontend_image
+    environment:
+      NODE_ENV: production
+    ports:
+      - "5030:4173" 
+    volumes:
+      - .:/usr/src/app
+    command: ["run","vite", "preview"]
