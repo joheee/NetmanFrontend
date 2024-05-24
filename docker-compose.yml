@@ -11,7 +11,6 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - "5030:4173" 
+      - "5030:80" 
     volumes:
-      - .:/usr/src/app
-    command: ["vite", "preview"]
+      - .:/app
